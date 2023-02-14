@@ -1,0 +1,17 @@
+.wallpaper {
+    background-image: url(../../public/img/wallpaper.jpg);
+    background-size: cover;
+
+
+}
+
+
+.c-opacity{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.269);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
