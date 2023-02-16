@@ -12,7 +12,6 @@ import Sendmsg from "./Contact/Sendmsg";
 
 function App() {
   const [viewSlider, setviewSlider] = useState("none");
-
   const [open, setOpen] = useState("none");
 
 
@@ -43,10 +42,10 @@ const darkTheme = createTheme({
       <Router>
       <SideBar {...{setTheme , SidbarWidth , setviewSlider ,viewSlider}} />
       <Routes>
-        <Route path='/'  element={<Home  {...{SidbarWidth}} />} />
-        <Route path='/about'  element={<About   {...{SidbarWidth}} />}  />
-        <Route path='/projects'  element={<Project   {...{SidbarWidth}} />}  />
-        <Route path='/contact'  element={<Contact  {...{SidbarWidth ,open, setOpen}} />}  />
+        <Route path='/'  element={<Home  {...{SidbarWidth ,setviewSlider}} />} />
+        <Route path='/about'  element={<About   {...{SidbarWidth ,setviewSlider}} />}  />
+        <Route path='/projects'  element={<Project   {...{SidbarWidth ,setviewSlider}} />}  />
+        <Route path='/contact'  element={<Contact  {...{SidbarWidth ,open, setOpen ,setviewSlider}} />}  />
       </Routes>
     </Router>
       </ThemeProvider>

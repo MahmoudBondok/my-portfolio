@@ -3,14 +3,20 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import "./Home.css";
 
-const Home = ({ SidbarWidth }) => {
+const Home = ({ SidbarWidth , setviewSlider}) => {
+
+
   return (
     <Box
       component="main"
       sx={{ height: "100vh", ml: { md: `${SidbarWidth}px` } }}
       className="wallpaper"
     >
-      <Box className="c-opacity">
+      <Box className="c-opacity" 
+              onClick={() => {
+              setviewSlider("none")
+              }}
+      >
         <Box>
           <Typography sx={{color : "white"}} variant="h4">Hi , i'm Ahmed Safwat</Typography>
           <Typography variant="h8">
@@ -31,7 +37,8 @@ const Home = ({ SidbarWidth }) => {
             />
           </Typography>
           <Button variant="contained">
-          <Box component="a"sx={{textDecoration : "none"}} href="/">
+          <Box component="a" target="_blank" href="https://drive.google.com/file/d/1zRfXKymRnNO0FKgLOt77OLXS9929BPdX/view"
+           sx={{textDecoration : "none"}}>
           View My Cv
           </Box>
           </Button>

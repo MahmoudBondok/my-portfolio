@@ -11,7 +11,6 @@ import React, { useState } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import WebIcon from "@mui/icons-material/Web";
-import AccessibilityIcon from "@mui/icons-material/Accessibility";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import { useTheme } from "@emotion/react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -75,7 +74,7 @@ const SideBar = ({ setTheme, SidbarWidth , viewSlider ,setviewSlider }) => {
         {socialicons.map((item , index) => {
           return (
             <ListItemButton key={index}>
-            <Box component="a" href={`${item.link}`} > 
+            <Box component="a" href={`${item.link}`} target="_blank" > 
                 <ListItemIcon
                   sx={{
                     mx: "auto",

@@ -14,13 +14,13 @@ import {
 } from "@mui/material";
 import React from "react";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import { useNavigate } from "react-router-dom";
 import { db } from "../Firebase/Firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 
-const Contact = ({ SidbarWidth, setOpen }) => {
+const Contact = ({ SidbarWidth, setOpen , setviewSlider }) => {
   const [Name, setName] = useState("");
   const [Email, seEmail] = useState("");
   const [subject, setsubject] = useState("");
@@ -32,13 +32,16 @@ const Contact = ({ SidbarWidth, setOpen }) => {
 
   const info = [
     { Text: "Email: ahmadxpp53@gmail.com", icon: <MailOutlineIcon /> },
-    { Text: "Phone : 01110351045", icon: <PhoneEnabledIcon /> },
+    { Text: "WhatsApp : 01110351045", icon: <WhatsAppIcon /> },
   ];
 
   return (
     <Box
       component="main"
       sx={{ height: "100vh", ml: { md: `${SidbarWidth}px` } }}
+      onClick={() => {
+        setviewSlider("none")
+        }}
     >
       <Box
         sx={{

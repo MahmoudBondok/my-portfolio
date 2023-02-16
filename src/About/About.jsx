@@ -4,7 +4,7 @@ import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Accoordion from "./Accoordion";
 
-const About = ({ SidbarWidth }) => {
+const About = ({ SidbarWidth , setviewSlider }) => {
   return (
     <Box
       component="main"
@@ -13,6 +13,9 @@ const About = ({ SidbarWidth }) => {
         maxHeight: "100vh",
         ml: { md: `${SidbarWidth}px` },
       }}
+      onClick={() => {
+        setviewSlider("none")
+        }}
     >
       <Box>
         <Typography variant="h5" sx={{ ml: "10px", mt: "30px", mb: "5px" }}>
