@@ -1,10 +1,10 @@
+import React from "react";
 import { Avatar, Divider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Accoordion from "./Accoordion";
 
-const About = ({ SidbarWidth , setviewSlider }) => {
+const About = ({ SidbarWidth, setviewSlider }) => {
   return (
     <Box
       component="main"
@@ -15,13 +15,13 @@ const About = ({ SidbarWidth , setviewSlider }) => {
       }}
       onClick={() => {
         setviewSlider("none")
-        }}
+      }}
     >
       <Box>
         <Typography variant="h5" sx={{ ml: "10px", mt: "30px", mb: "5px" }}>
-          About Me :
+          About Me
         </Typography>
-        <Divider sx={{ bgcolor: "blue", width: "100px", ml: "10px" }} />
+        <Divider sx={{ bgcolor: "#ccc", width: "100px", ml: "10px" }} />
       </Box>
 
       <Box
@@ -40,18 +40,18 @@ const About = ({ SidbarWidth , setviewSlider }) => {
           src="../../img/avatar.jpg"
         />
         <Typography variant="h5" textAlign="center" mt="10px">
-          Ahmed Safwat Abbas
+          Mahmoud Bondok
         </Typography>
 
         <Typography variant="h5" textAlign="center" mt="10px">
           {" "}
-          I'm a front-end web developer | React.js
+          I'm a Front-End Web Developer | React.js
         </Typography>
       </Box>
       <Box my="10px">
-        <Typography variant="h6" textAlign="center">
+        <Typography variant="h6" style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center' }}>
           <LocationOnIcon />
-          Alexanderia ,Egypt
+          Damanhour ,Egypt
         </Typography>
       </Box>
 

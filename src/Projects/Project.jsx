@@ -11,65 +11,51 @@ import {
 import { Box } from "@mui/system";
 import React from "react";
 
-const Project = ({ SidbarWidth , setviewSlider }) => {
+const Project = ({ SidbarWidth, setviewSlider }) => {
   const ProArray = [
     {
-      img: "../../img/project/commerce.png",
-      Title: "E-Commerce App",
+      img: "../../img/project/Kasper.png",
+      Title: "Kasper Template",
       Discription:
-        "E-Commerce App with Shopping Cart using react js and redux toolkit and Material Ui",
+        "Design Using Html and CSS",
       Github:
-        "https://github.com/AhmedSafwat97/E-Commerce-with-shopping-cart-using-React-redux",
-      demo: "https://e-commerce-house-shop.netlify.app",
+        "https://github.com/MahmoudBondok/-Kasper",
+      demo: "https://mahmoudbondok.github.io/-Kasper/",
     },
     {
-      img: "../../img/project/to do list.png",
-      Title: "To Do List",
-      Discription: "To do List App with Auth With Firebase Database",
-      Github: "https://github.com/AhmedSafwat97/To-Do-LIst-React-App-with-Auth",
-      demo: "https://t0-do-list-app.netlify.app",
+      img: "../../img/project/Leon.png",
+      Title: "Leon Template",
+      Discription: "Design Using Html and CSS",
+      Github: "https://github.com/MahmoudBondok/Leon-Template",
+      demo: "https://mahmoudbondok.github.io/Leon-Template/",
     },
     {
-      img: "../../img/project/Movie App.png",
-      Title: "Movie App",
-      Discription: "Movies App using React js , using MovieDb Api  ",
-      Github: "https://github.com/AhmedSafwat97/Movie-app--using-react-js",
-      demo: "https://movies-app-with-react.netlify.app",
+      img: "../../img/project/Pizza.png",
+      Title: "Pizza Website",
+      Discription: "Pizza Landing Page Using HTML and CSS",
+      Github: "https://github.com/MahmoudBondok/Pizza-website---Using-React",
+      demo: "https://pizza-com.onrender.com",
     },
     {
-      img: "../../img/project/portfolio.png",
-      Title: "Portfolio React App",
-      Discription: "Portfolio App using React js ",
-      Github: "https://github.com/AhmedSafwat97/Portfolio-WebSite",
-      demo: "https://portfolio-web-react-app.netlify.app",
-    },
-    {
-      img: "../../img/project/E-commerce with js.png",
-      Title: "E-Commerce with js",
-      Discription: "Ecommerce with shopping Cart using Html and JavaScript",
-      Github: "https://github.com/AhmedSafwat97/Ecommerce-using-javascript",
-      demo: "https://ahmedsafwat97.github.io/Ecommerce-using-javascript/",
-    },
-    {
-      img: "../../img/project/landing page.png",
+      img: "../../img/project/Elzero.png",
       Title: "Landing Page",
-      Discription: "pizza Landing Page using Html , Css And JavaScript ",
-      Github: "https://github.com/AhmedSafwat97/landing-page",
-      demo: "https://ahmedsafwat97.github.io/landing-page/",
+      Discription: "Design Using Html and CSS",
+      Github: "https://github.com/MahmoudBondok/Elzero-Design",
+      demo: "https://mahmoudbondok.github.io/Elzero-Design/",
     },
     {
-      img: "../../img/project/Screenshot.png",
-      Title: "Weather App",
-      Discription: "Weather App With Node js ",
-      Github: "https://github.com/AhmedSafwat97/Node-Js-weather-app",
-      demo: "",
+      img: "../../img/project/Dashboard.png",
+      Title: "Dashboard App",
+      Discription: "Design Using Html and CSS",
+      Github: "https://github.com/MahmoudBondok/Dashboard-Template",
+      demo: "https://mahmoudbondok.github.io/Dashboard-Template/",
     },
     {
-      img: "../../img/project/xogame.png",
-      Title: "X-o Game",
-      Discription: "X-o Game using Html Css And JavaScript",
-      Github: "https://github.com/AhmedSafwat97/X-O_Game",
-      demo: "https://x-o-play-game.netlify.app",
+      img: "../../img/project/Restaurant.png",
+      Title: "Restaurant App",
+      Discription: "Restaurant Landing Page Using HTML and CSS",
+      Github: "https://github.com/MahmoudBondok/Website-For-a-Restaurant-Using--React",
+      demo: "https://restaurant-z4wt.onrender.com",
     },
   ];
 
@@ -83,13 +69,13 @@ const Project = ({ SidbarWidth , setviewSlider }) => {
       }}
       onClick={() => {
         setviewSlider("none")
-        }}
+      }}
 
     >
       <Typography variant="h5" sx={{ ml: "10px", mt: "30px", mb: "5px" }}>
-        Projects :
+        Projects
       </Typography>
-      <Divider sx={{ bgcolor: "blue", width: "90px", ml: "10px" }} />
+      <Divider sx={{ bgcolor: "#ccc", width: "90px", ml: "10px", mb: '20px' }} />
       <Box sx={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}>
         {ProArray.map((item, index) => {
           return (
@@ -97,11 +83,11 @@ const Project = ({ SidbarWidth , setviewSlider }) => {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="140"
+                  height="200"
                   image={item.img}
                   alt=""
                 />
-                <CardContent sx={{height : "120px"}}>
+                <CardContent sx={{ height: "120px", mb: '-35px' }}>
                   <Typography gutterBottom variant="h5" component="div">
                     {item.Title}
                   </Typography>
@@ -113,13 +99,13 @@ const Project = ({ SidbarWidth , setviewSlider }) => {
               <CardActions
                 sx={{ justifyContent: "space-between", alignItems: "baseline" }}
               >
-                <Box component="a" target="_blank" href={`${item.demo}`}>
-                  <Button size="small" color="primary">
+                <Box style={{ textDecoration: 'none' }} component="a" target="_blank" href={`${item.demo}`}>
+                  <Button style={{ textDecoration: 'none' }} size="small" color="primary">
                     Demo
                   </Button>
                 </Box>
-                <Box component="a" target="_blank" href={`${item.Github}`}>
-                  <Button size="small" color="primary">
+                <Box style={{ textDecoration: 'none' }} component="a" target="_blank" href={`${item.Github}`}>
+                  <Button style={{ textDecoration: 'none' }} size="small" color="primary">
                     Github
                   </Button>
                 </Box>

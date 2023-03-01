@@ -9,6 +9,7 @@ import Project from "./Projects/Project"
 import Contact from "./Contact/Contact";
 import ViewSlider from "./SideBar/viewSlider";
 import Sendmsg from "./Contact/Sendmsg";
+import ProjectFullStack from "./Projects/ProjectFullStack";
 
 function App() {
   const [viewSlider, setviewSlider] = useState("none");
@@ -16,40 +17,40 @@ function App() {
 
 
 
-const [Theme, setTheme] = useState(
-  localStorage.getItem("PageMood") === null
-  ? "light"
-  : localStorage.getItem("PageMood") === "light"
-  ? "light"
-  : "dark"
-);
-const SidbarWidth = 250
+  const [Theme, setTheme] = useState(
+    localStorage.getItem("PageMood") === null
+      ? "light"
+      : localStorage.getItem("PageMood") === "light"
+        ? "light"
+        : "dark"
+  );
+  const SidbarWidth = 250
 
-const darkTheme = createTheme({
-  palette: {
-    mode: Theme ,
-  },
-});
+  const darkTheme = createTheme({
+    palette: {
+      mode: Theme,
+    },
+  });
 
 
 
   return (
     <div className="App">
       <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <Sendmsg  {...{open, setOpen}} />
-      <ViewSlider {...{setviewSlider , viewSlider}} />
-      <Router>
-      <SideBar {...{setTheme , SidbarWidth , setviewSlider ,viewSlider}} />
-      <Routes>
-        <Route path='/'  element={<Home  {...{SidbarWidth ,setviewSlider}} />} />
-        <Route path='/about'  element={<About   {...{SidbarWidth ,setviewSlider}} />}  />
-        <Route path='/projects'  element={<Project   {...{SidbarWidth ,setviewSlider}} />}  />
-        <Route path='/contact'  element={<Contact  {...{SidbarWidth ,open, setOpen ,setviewSlider}} />}  />
-      </Routes>
-    </Router>
+        <CssBaseline />
+        <Sendmsg  {...{ open, setOpen }} />
+        <ViewSlider {...{ setviewSlider, viewSlider }} />
+        <Router>
+          <SideBar {...{ setTheme, SidbarWidth, setviewSlider, viewSlider }} />
+          <Routes>
+            <Route path='/' element={<Home  {...{ SidbarWidth, setviewSlider }} />} />
+            <Route path='/about' element={<About   {...{ SidbarWidth, setviewSlider }} />} />
+            <Route path='/projects' element={<Project   {...{ SidbarWidth, setviewSlider }} />} />
+            <Route path='//project-fullstack' element={<ProjectFullStack   {...{ SidbarWidth, setviewSlider }} />} />
+            <Route path='/contact' element={<Contact  {...{ SidbarWidth, open, setOpen, setviewSlider }} />} />
+          </Routes>
+        </Router>
       </ThemeProvider>
-
     </div>
   );
 }

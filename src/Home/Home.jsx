@@ -3,7 +3,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import "./Home.css";
 
-const Home = ({ SidbarWidth , setviewSlider}) => {
+const Home = ({ SidbarWidth, setviewSlider }) => {
 
 
   return (
@@ -12,13 +12,13 @@ const Home = ({ SidbarWidth , setviewSlider}) => {
       sx={{ height: "100vh", ml: { md: `${SidbarWidth}px` } }}
       className="wallpaper"
     >
-      <Box className="c-opacity" 
-              onClick={() => {
-              setviewSlider("none")
-              }}
+      <Box className="c-opacity"
+        onClick={() => {
+          setviewSlider("none")
+        }}
       >
         <Box>
-          <Typography sx={{color : "white"}} variant="h4">Hi , i'm Ahmed Safwat</Typography>
+          <Typography sx={{ color: "white" }} variant="h4">Hello, I'm Mahmoud Safwat</Typography>
           <Typography variant="h8">
             <TypeAnimation
               sequence={[
@@ -37,14 +37,16 @@ const Home = ({ SidbarWidth , setviewSlider}) => {
             />
           </Typography>
           <Button variant="contained">
-          <Box component="a" target="_blank" href="https://drive.google.com/file/d/1zRfXKymRnNO0FKgLOt77OLXS9929BPdX/view"
-           sx={{textDecoration : "none"}}>
-          View My Cv
-          </Box>
+            <Box component="a" target="_blank" href="https://drive.google.com/file/d/1zRfXKymRnNO0FKgLOt77OLXS9929BPdX/view"
+              sx={{
+                textDecoration: "none", fontWeight: '500', color: '#FFF'
+              }}>
+              View My Cv
+            </Box>
           </Button>
         </Box>
-      </Box>
-    </Box>
+      </Box >
+    </Box >
   );
 };
 

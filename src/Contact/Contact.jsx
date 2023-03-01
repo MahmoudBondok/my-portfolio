@@ -20,7 +20,7 @@ import { db } from "../Firebase/Firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 
-const Contact = ({ SidbarWidth, setOpen , setviewSlider }) => {
+const Contact = ({ SidbarWidth, setOpen, setviewSlider }) => {
   const [Name, setName] = useState("");
   const [Email, seEmail] = useState("");
   const [subject, setsubject] = useState("");
@@ -31,8 +31,8 @@ const Contact = ({ SidbarWidth, setOpen , setviewSlider }) => {
   const navigate = useNavigate();
 
   const info = [
-    { Text: "Email: ahmadxpp53@gmail.com", icon: <MailOutlineIcon /> },
-    { Text: "WhatsApp : 01110351045", icon: <WhatsAppIcon /> },
+    { Text: "Email: mahmoudsafwat799@gmail.com", icon: <MailOutlineIcon /> },
+    { Text: "WhatsApp : 01102534778", icon: <WhatsAppIcon /> },
   ];
 
   return (
@@ -41,7 +41,7 @@ const Contact = ({ SidbarWidth, setOpen , setviewSlider }) => {
       sx={{ height: "100vh", ml: { md: `${SidbarWidth}px` } }}
       onClick={() => {
         setviewSlider("none")
-        }}
+      }}
     >
       <Box
         sx={{
@@ -70,9 +70,7 @@ const Contact = ({ SidbarWidth, setOpen , setviewSlider }) => {
             Message Me
           </Typography>
           <Typography textAlign="center" sx={{
-            display : Err
-
-
+            display: Err
           }} >Please Fill The Form To Send Your Message</Typography>
           <Box sx={{ display: "flex" }}>
             <TextField
